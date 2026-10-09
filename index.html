@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Presentasi 3D interaktif Divisi AK (Atlet &amp; Kepelatihan) UKMPC UNESA 2026">
+    <meta name="color-scheme" content="dark">
+    <title>Divisi AK · Presentasi 3D</title>
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230d121c'/%3E%3Ctext x='32' y='46' font-size='40' text-anchor='middle' fill='%23f6d365'%3E%E2%99%9A%3C/text%3E%3C/svg%3E">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <a class="skip-link" href="#slideRegion">Lewati ke isi slide</a>
+
+    <!-- Layar pemuatan: hanya untuk ruang 3D; slide tetap bisa dipakai bila 3D gagal -->
+    <div id="loader" role="status" aria-live="polite">
+        <div class="loader-card">
+            <div class="loader-spinner" aria-hidden="true"></div>
+            <h2 id="loaderTitle">Memuat ruangan 3D…</h2>
+            <p id="loaderText">Menyiapkan presentasi</p>
+            <div class="loader-bar" aria-hidden="true"><span id="loaderBar"></span></div>
+        </div>
+    </div>
+
+    <!-- Banner status/error (non-blocking) -->
+    <div id="statusBanner" class="status-banner" role="alert" hidden>
+        <div class="status-body">
+            <strong id="statusTitle"></strong>
+            <span id="statusMessage"></span>
+        </div>
+        <div class="status-actions" id="statusActions"></div>
+        <button type="button" class="status-close" id="statusClose" aria-label="Tutup pemberitahuan">×</button>
+    </div>
+
+    <div id="canvas-container"></div>
+
+    <main class="slides-overlay">
+        <section class="slide-container" id="slideRegion" aria-roledescription="carousel" aria-label="Slide presentasi">
+
+            <!-- SLIDE 1: Pembuka -->
+            <section class="slide" data-title="Divisi AK" aria-roledescription="slide" aria-label="1 dari 8">
+                <h1 class="slide-title"><span class="ico" aria-hidden="true">♚</span><span class="txt">DIVISI AK</span></h1>
+                <p><span class="highlight">Atlet &amp; Kepelatihan</span> · UKMPC UNESA 2026</p>
+                <p class="muted">3 Ranah Taksonomi Bloom · Kognitif · Afektif · Psikomotorik</p>
+                <ul class="feature-list">
+                    <li>Geser slide untuk menjelajahi ruangan</li>
+                    <li>Kamera akan bergerak ke setiap sudut</li>
+                    <li>Drag untuk melihat dari sudut lain</li>
+                </ul>
+            </section>
+
+            <!-- SLIDE 2: Anggota -->
+            <section class="slide" data-title="Anggota Divisi" aria-roledescription="slide" aria-label="2 dari 8" hidden>
+                <h2 class="slide-title"><span class="ico" aria-hidden="true">👥</span><span class="txt">Anggota Divisi</span></h2>
+                <div class="card-item">
+                    <h3>Ketua &amp; Wakil</h3>
+                    <div class="member-grid">
+                        <span class="member-tag ketua">Fata Favian Cannavaro</span>
+                        <span class="member-tag">Muhammad Faiz</span>
+                    </div>
+                </div>
+                <div class="card-item">
+                    <h3>Anggota Aktif</h3>
+                    <div class="member-grid">
+                        <span class="member-tag">Rafael Kimi Abednego</span>
+                        <span class="member-tag">Muhammad Hisyam</span>
+                        <span class="member-tag">Mochammad Andika</span>
+                        <span class="member-tag">A Sahru Fahri Alfiyan</span>
+                        <span class="member-tag">Septiani Nur Khasanah</span>
+                    </div>
+                </div>
+                <p class="footnote">7 anggota siap mencetak prestasi</p>
+            </section>
+
+            <!-- SLIDE 3: Visi & Misi -->
+            <section class="slide" data-title="Visi &amp; Misi" aria-roledescription="slide" aria-label="3 dari 8" hidden>
+                <h2 class="slide-title"><span class="ico" aria-hidden="true">🎯</span><span class="txt">Visi &amp; Misi</span></h2>
+                <p><span class="highlight">Visi:</span> Mewujudkan anggota UKMPC UNESA yang cerdas secara taktik (Kognitif), bermental tangguh dan sportif (Afektif), serta memiliki ketahanan prima (Psikomotorik).</p>
+                <div class="grid-3col">
+                    <div class="card-item"><h3>🧠 Kognitif</h3><p>Pengetahuan, strategi, pemahaman</p></div>
+                    <div class="card-item"><h3>❤️ Afektif</h3><p>Sikap, karakter, mental sportivitas</p></div>
+                    <div class="card-item"><h3>🏃 Psikomotorik</h3><p>Keterampilan fisik &amp; ketangkasan</p></div>
+                </div>
+            </section>
+
+            <!-- SLIDE 4: Kognitif -->
+            <section class="slide" data-title="Ranah Kognitif" aria-roledescription="slide" aria-label="4 dari 8" hidden>
+                <h2 class="slide-title"><span class="ico" aria-hidden="true">🧠</span><span class="txt">Ranah Kognitif</span></h2>
+                <div class="card-item"><h3>📘 Penguatan</h3><p>Dasar-dasar catur, strategi, peningkatan kualitas. Selasa-Kamis, UKM Center lt.2.</p></div>
+                <div class="card-item"><h3>📈 Level Up</h3><p>Evaluasi akhir periode, kompetitif sehat. Diakhir periode pembelajaran.</p></div>
+                <div class="badge-eval">⚠️ Evaluasi: kelas Atlet minim kehadiran (hanya Ali aktif). Sistem poin berjalan.</div>
+            </section>
+
+            <!-- SLIDE 5: Afektif -->
+            <section class="slide" data-title="Ranah Afektif" aria-roledescription="slide" aria-label="5 dari 8" hidden>
+                <h2 class="slide-title"><span class="ico" aria-hidden="true">❤️</span><span class="txt">Ranah Afektif</span></h2>
+                <div class="card-item"><h3>🏅 Seleksi Delegasi</h3><p>Menjaring atlet, menanamkan sportivitas, sikap ksatria. 2-4 minggu sebelum tournament.</p></div>
+                <div class="card-item"><h3>🎯 Official Tournament</h3><p>Pendampingan atlet, administratif, relasi dengan UKM Catur lain. Perpustakaan lt.5 Ubaya.</p></div>
+                <div class="badge-eval">📌 Evaluasi: delegasi tepat waktu, strategi cukup, namun kurang teliti &amp; manajemen waktu perlu dilatih.</div>
+            </section>
+
+            <!-- SLIDE 6: Psikomotorik -->
+            <section class="slide" data-title="Psikomotorik" aria-roledescription="slide" aria-label="6 dari 8" hidden>
+                <h2 class="slide-title"><span class="ico" aria-hidden="true">🏃</span><span class="txt">Psikomotorik</span></h2>
+                <div class="card-item"><h3>♟ Fun Game (Catur Estafet)</h3><p>Meningkatkan stamina, ketahanan fisik, relaksasi otot. Sudah terlaksana, 16 peserta.</p></div>
+                <div class="card-item"><h3>⚡ Tujuan</h3><p>Melatih gerak motorik kasar sebagai relaksasi dari rutinitas statis.</p></div>
+            </section>
+
+            <!-- SLIDE 7: Program Kerja -->
+            <section class="slide" data-title="Program Kerja" aria-roledescription="slide" aria-label="7 dari 8" hidden>
+                <h2 class="slide-title"><span class="ico" aria-hidden="true">🏆</span><span class="txt">Program Kerja</span></h2>
+                <div class="card-item"><h3>🏆 Unesa Chess Competition (UCC)</h3><p>6 Maret 2026, Gedung Serbaguna, target 50 peserta.</p></div>
+                <div class="card-item">
+                    <h3>🌟 Unesa Chess Tournament (UCT)</h3>
+                    <p>12 September 2026, BG Junction, target 200 peserta, nasional.</p>
+                    <!-- CATATAN KONTEN: tanggal UCT sudah lewat, tetapi data proyek belum memuat hasil pelaksanaannya.
+                         Setelah dikonfirmasi, ganti/hapus penanda di bawah (lihat README → Catatan konten). -->
+                    <span class="status-chip" title="Tanggal kegiatan sudah lewat, tetapi data proyek belum mencantumkan hasil pelaksanaannya. Perbarui setelah dikonfirmasi.">Hasil pelaksanaan: perlu konfirmasi</span>
+                </div>
+                <div class="badge-eval">✅ Evaluasi UCC: mencapai target, kendala tempat &amp; wasit.</div>
+            </section>
+
+            <!-- SLIDE 8: Penutup -->
+            <section class="slide slide-closing" data-title="Thank You" aria-roledescription="slide" aria-label="8 dari 8" hidden>
+                <div class="closing">
+                    <div class="closing-icon" aria-hidden="true">♚</div>
+                    <h2 class="slide-title"><span class="txt">THANK YOU</span></h2>
+                    <p class="closing-sub">Divisi AK · UKMPC UNESA 2026</p>
+                    <p class="closing-meta">3 Ranah Taksonomi Bloom</p>
+                    <p class="closing-note motion-only">✨ Ruangan akan berputar perlahan</p>
+                </div>
+            </section>
+
+        </section>
+    </main>
+
+    <nav class="nav-controls" aria-label="Navigasi slide">
+        <button type="button" class="nav-btn" id="prevBtn" aria-label="Slide sebelumnya">
+            <span aria-hidden="true">‹</span><span class="btn-label"> Sebelumnya</span>
+        </button>
+        <div class="dot-indicators" id="dotContainer"></div>
+        <span class="slide-counter" id="slideCounter" aria-hidden="true">1/8</span>
+        <button type="button" class="nav-btn" id="nextBtn" aria-label="Slide berikutnya">
+            <span class="btn-label">Berikutnya </span><span aria-hidden="true">›</span>
+        </button>
+    </nav>
+
+    <div class="tool-controls" role="toolbar" aria-label="Kontrol tampilan">
+        <button type="button" class="tool-btn" id="resetViewBtn" title="Kembali ke sudut kamera slide (R)" aria-label="Kembali ke sudut kamera slide">⟲</button>
+        <button type="button" class="tool-btn" id="panelToggleBtn" title="Sembunyikan/tampilkan panel (H)" aria-label="Sembunyikan panel slide" aria-pressed="false">▣</button>
+        <button type="button" class="tool-btn" id="helpBtn" title="Petunjuk kontrol (?)" aria-label="Petunjuk kontrol" aria-expanded="false" aria-controls="helpPanel">?</button>
+    </div>
+
+    <div class="help-panel" id="helpPanel" role="dialog" aria-modal="false" aria-labelledby="helpTitle" hidden>
+        <div class="help-head">
+            <h2 id="helpTitle">Petunjuk kontrol</h2>
+            <button type="button" class="status-close" id="helpClose" aria-label="Tutup petunjuk">×</button>
+        </div>
+        <dl class="help-list">
+            <dt><kbd>←</kbd> <kbd>→</kbd> / <kbd>PgUp</kbd> <kbd>PgDn</kbd></dt><dd>Slide sebelumnya / berikutnya</dd>
+            <dt><kbd>Spasi</kbd></dt><dd>Slide berikutnya</dd>
+            <dt><kbd>Home</kbd> <kbd>End</kbd></dt><dd>Slide pertama / terakhir</dd>
+            <dt><kbd>H</kbd></dt><dd>Sembunyikan / tampilkan panel</dd>
+            <dt><kbd>R</kbd></dt><dd>Kembalikan kamera ke sudut slide</dd>
+            <dt>Drag kiri</dt><dd>Putar kamera</dd>
+            <dt>Scroll / cubit</dt><dd>Zoom</dd>
+            <dt>Drag kanan / dua jari</dt><dd>Geser kamera</dd>
+            <dt>Geser panel (layar sentuh)</dt><dd>Pindah slide</dd>
+        </dl>
+        <p class="help-credit">Model 3D: “Throne room – Medieval Fantasy Challenge” oleh tuturu (Sketchfab), lisensi CC BY 4.0. Meja &amp; bidak catur dibuat prosedural. Three.js © three.js authors (MIT). Detail: CREDITS.md.</p>
+    </div>
+
+    <div class="sr-only" id="liveRegion" aria-live="polite" aria-atomic="true"></div>
+
+    <noscript>
+        <div class="noscript">JavaScript harus aktif untuk menjalankan presentasi ini.</div>
+    </noscript>
+
+    <!-- Navigasi slide: skrip klasik, tetap berjalan walau modul 3D gagal dimuat -->
+    <script src="js/slides.js" defer></script>
+
+    <!-- Three.js r163 disimpan lokal di folder vendor/ (tanpa CDN) -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "./vendor/three/build/three.module.min.js",
+                "three/addons/": "./vendor/three/examples/jsm/"
+            }
+        }
+    </script>
+    <script type="module" src="js/scene.js" onerror="window.__sceneScriptFailed && window.__sceneScriptFailed()"></script>
+</body>
+</html>
